@@ -4,6 +4,13 @@
     "version":"0.0.1",
     "slug":"cbjsoup",
     "type":"modules",
+	"homepage":"https://github.com/donbellamy/cbjsoup",
+	"documentation":"https://github.com/donbellamy/cbjsoup",
+    "repository":{
+        "type":"git",
+        "url":"https://github.com/donbellamy/cbjsoup"
+    },
+	"shortDescription":"",
     "dependencies":{
         "cbjavaloader":"^1.4.0+29"
     },

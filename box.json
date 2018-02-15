@@ -1,0 +1,13 @@
+{
+    "name":"JSoup",
+    "author":"Perfect Code, LLC <info@perfectcode.com>",
+    "version":"0.0.1",
+    "slug":"cbjsoup",
+    "type":"modules",
+    "dependencies":{
+        "cbjavaloader":"^1.4.0+29"
+    },
+    "installPaths":{
+        "cbjavaloader":"modules/cbjavaloader"
+    }
+}

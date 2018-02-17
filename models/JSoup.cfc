@@ -16,7 +16,15 @@ component singleton threadsafe {
 	}
 
 	function clean( required string html ) {
-		return variables.jsoup.clean( arguments.html );
+		// TODO: allow options here
+		/* 
+		none()
+		simpleText()
+		basic()
+		basicWithImages()
+		relaxed()
+		*/
+		return variables.jsoup.clean( arguments.html, variables.whitelist );
 	}
 
 	function onDIComplete() {
@@ -26,6 +34,7 @@ component singleton threadsafe {
 	private void function loadJsoup() {
 		if ( !isJsoupLoaded() ) {
 			variables.jsoup = javaLoader.create("org.jsoup.Jsoup");
+			variables.whitelist = javaLoader.create("org.jsoup.safety.Whitelist");
 		}
 	}
 	

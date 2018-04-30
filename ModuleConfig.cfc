@@ -4,7 +4,7 @@ component {
 	this.author = "Perfect Code, LLC";
 	this.webURL = "https://perfectcode.com";
 	this.description = "Leverages the JSoup html parser for extracting and manipulating html";
-	this.version = "1.0.0";
+	this.version = "0.0.1";
 	this.viewParentLookup = true;
 	this.layoutParentLookup = true;
 	this.entryPoint	= "cbjsoup";
@@ -22,7 +22,7 @@ component {
 	}
 
 	private function parseParentSettings() {
-		
+
 		var config = controller.getSetting("ColdBoxConfig");
 		var settings = controller.getConfigSettings();
 		var jsoupDSL = config.getPropertyMixin( "jsoup", "variables", structNew() );

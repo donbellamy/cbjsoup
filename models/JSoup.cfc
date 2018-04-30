@@ -11,8 +11,25 @@ component singleton threadsafe {
 		return variables.jsoup;
 	}
 
-	function getWhitelist() {
-		return variables.whitelist;
+	function getWhitelist( string mode="relaxed" ) {
+		var whitelist = variables.whitelist;
+		switch ( arguments.mode ) {
+			case "none":
+				whitelist = whitelist.none();
+				break;
+			case "simpleText":
+				whitelist = whitelist.simpleText();
+				break;
+			case "basic":
+				whitelist = whitelist.basic();
+				break;
+			case "basicWithImages":
+				whitelist = whitelist.basicWithImages();
+				break;
+			default:
+				whitelist = whitelist.relaxed();
+		}
+		return whitelist;
 	}
 
 	function parse( required string html ) {
@@ -27,30 +44,15 @@ component singleton threadsafe {
 		return variables.jsoup.connect( arguments.url ).get();
 	}
 
-	function clean( required string html, string mode="basicWithImages" ) {
-		var whitelist = variables.whitelist;
-		switch ( arguments.mode ) {
-			case "none":
-				whitelist = whitelist.none();
-				break;
-			case "simpleText":
-				whitelist = whitelist.simpleText();
-				break;
-			case "basic":
-				whitelist = whitelist.basic();
-				break;
-			case "relaxed":
-				whitelist = whitelist.relaxed();
-				break;
-			default:
-				whitelist = whitelist.basicWithImages();
-		}
-		return variables.jsoup.clean( arguments.html, whitelist );
+	function clean( required string html, any whitelist=getWhiteList() ) {
+		return variables.jsoup.clean( arguments.html, arguments.whitelist );
 	}
 
 	function onDIComplete() {
 		loadJsoup();
 	}
+
+	/************************************** private *********************************************/
 
 	private void function loadJsoup() {
 		if ( !isJsoupLoaded() ) {

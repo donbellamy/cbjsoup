@@ -1,18 +1,30 @@
+/**
+ * CB JSoup
+ * Module Config
+ * @author Don Bellamy <don@perfectcode.com>
+ */
 component {
 
-	this.title = "JSoup";
+	// Module properties
+	this.title = "CB JSoup";
 	this.author = "Perfect Code, LLC";
 	this.webURL = "https://perfectcode.com";
 	this.description = "Leverages the JSoup html parser for extracting and manipulating html";
-	this.version = "0.0.1";
+	this.version = "1.0.0";
 	this.viewParentLookup = true;
 	this.layoutParentLookup = true;
 	this.entryPoint	= "cbjsoup";
 	this.cfMapping = "cbjsoup";
 	this.dependencies = ["cbjavaloader"];
 
+	/**
+	 * Configure module properties
+	 */
 	function configure()  {}
 
+	/**
+	 * Fired when module is loaded
+	 */
 	function onLoad() {
 
 		var settings = controller.getConfigSettings();
@@ -21,6 +33,9 @@ component {
 
 	}
 
+	/**
+	 * Parse the parent settings
+	 */
 	private function parseParentSettings() {
 
 		var config = controller.getSetting("ColdBoxConfig");

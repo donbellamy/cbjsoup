@@ -1,23 +1,21 @@
 {
-	"name":"JSoup",
-	"author":"Perfect Code, LLC <info@perfectcode.com>",
-	"version":"1.0.0",
-	"slug":"cbjsoup",
-	"type":"modules",
-	"homepage":"https://github.com/donbellamy/cbjsoup",
-	"documentation":"https://github.com/donbellamy/cbjsoup",
-	"repository":{
-		"type":"git",
-		"url":"https://github.com/donbellamy/cbjsoup"
+	"name": "JSoup",
+	"author": "Perfect Code, LLC <info@perfectcode.com>",
+	"version": "1.0.0",
+	"slug": "cbjsoup",
+	"type": "modules",
+	"homepage": "https://github.com/donbellamy/cbjsoup",
+	"documentation": "https://github.com/donbellamy/cbjsoup",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/donbellamy/cbjsoup"
 	},
-	"shortDescription":"",
-	"contributors":[
-		"Don Bellamy <don@perfectcode.com>"
-	],
-	"dependencies":{
-		"cbjavaloader":"^1.4.0+29"
+	"shortDescription": "",
+	"contributors": ["Don Bellamy <don@perfectcode.com>"],
+	"dependencies": {
+		"cbjavaloader": "^1.4.0"
 	},
-	"installPaths":{
-		"cbjavaloader":"modules/cbjavaloader"
+	"installPaths": {
+		"cbjavaloader": "modules/cbjavaloader"
 	}
 }

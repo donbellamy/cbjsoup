@@ -1,4 +1,4 @@
-# cbJsoup Module
+# CBjsoup Module
 
 ## System Requirements
 

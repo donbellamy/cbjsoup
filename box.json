@@ -1,6 +1,6 @@
 {
 	"name": "JSoup",
-	"author": "Perfect Code, LLC <info@perfectcode.com>",
+	"author": "Don Bellamy <don@perfectcode.com>",
 	"version": "1.0.0",
 	"slug": "cbjsoup",
 	"type": "modules",
@@ -10,12 +10,12 @@
 		"type": "git",
 		"url": "https://github.com/donbellamy/cbjsoup"
 	},
-	"shortDescription": "",
-	"contributors": ["Don Bellamy <don@perfectcode.com>"],
+	"shortDescription": "A ColdBox module for JSoup.",
+	"contributors": [
+        "Don Bellamy <don@perfectcode.com>"
+    ],
 	"dependencies": {
 		"cbjavaloader": "^1.4.0"
 	},
-	"installPaths": {
-		"cbjavaloader": "modules/cbjavaloader"
-	}
+	"location": "forgeboxStorage"
 }

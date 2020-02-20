@@ -19,16 +19,18 @@ component singleton threadsafe {
 
 	/**
 	 * Gets the jsoup instance
+	 * @return The jsoup instance
 	 */
-	function getJsoup() {
+	any function getJsoup() {
 		return variables.jsoup;
 	}
 
 	/**
 	 * Gets the whitelist instance
 	 * @mode The whitelist mode to use
+	 * @return The jsoup whitelist object
 	 */
-	function getWhitelist( string mode="relaxed" ) {
+	any function getWhitelist( string mode="relaxed" ) {
 		var whitelist = variables.whitelist;
 		switch ( arguments.mode ) {
 			case "none":
@@ -52,24 +54,27 @@ component singleton threadsafe {
 	/**
 	 * Parses an html string
 	 * @html The html string to parse
+	 * @return The parsed html string
 	 */
-	function parse( required string html ) {
+	string function parse( required string html ) {
 		return variables.jsoup.parse( arguments.html );
 	}
 
 	/**
 	 * Parses a body fragment
 	 * @html The html string to parse
+	 * @return The parsed html string
 	 */
-	function parseBodyFragment( required string html ) {
+	string function parseBodyFragment( required string html ) {
 		return variables.jsoup.parseBodyFragment( arguments.html );
 	}
 
 	/**
 	 * Gets a url to parse
 	 * @url The url to connect
+	 * @return The document object
 	 */
-	function connect( required string url ) {
+	any function connect( required string url ) {
 		return variables.jsoup.connect( arguments.url ).get();
 	}
 
@@ -77,8 +82,9 @@ component singleton threadsafe {
 	 * Cleans an html string
 	 * @html The html string to clean
 	 * @whitelist The whitelist to use
+	 * @return The cleaned html string
 	 */
-	function clean( required string html, any whitelist=getWhiteList() ) {
+	string function clean( required string html, any whitelist=getWhiteList() ) {
 		return variables.jsoup.clean( arguments.html, arguments.whitelist );
 	}
 

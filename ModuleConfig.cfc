@@ -7,10 +7,10 @@ component {
 
 	// Module properties
 	this.title = "CB JSoup";
-	this.author = "Perfect Code, LLC";
-	this.webURL = "https://perfectcode.com";
+	this.author = "Don Bellamy <don@perfectcode.com>";
+	this.webURL = "https://github.com/donbellamy/cbjsoup";
 	this.description = "Leverages the JSoup html parser for extracting and manipulating html";
-	this.version = "1.0.0";
+	this.version = "1.0.1";
 	this.viewParentLookup = true;
 	this.layoutParentLookup = true;
 	this.entryPoint	= "cbjsoup";

@@ -10,7 +10,7 @@ component {
 	this.author = "Don Bellamy <don@perfectcode.com>";
 	this.webURL = "https://github.com/donbellamy/cbjsoup";
 	this.description = "Leverages the JSoup html parser for extracting and manipulating html";
-	this.version = "1.0.1";
+	this.version = "1.1.0";
 	this.viewParentLookup = true;
 	this.layoutParentLookup = true;
 	this.entryPoint	= "cbjsoup";
